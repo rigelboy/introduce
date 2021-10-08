@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>introduce</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        background-image: url("https://rigel-1306416438.cos.ap-shanghai.myqcloud.com/imgs/23.jfif");
+        background-size: 105%;
+        overflow: hidden;
+      }
+      @media screen and (max-width: 786px) {
+        .container {
+          background: url("https://rigel-1306416438.cos.ap-shanghai.myqcloud.com/imgs/34.jfif");
+          background-size: 110%;
+        }
+        .container1 {
+          position: absolute;
+          top: 296px;
+          left: 443px;
+        }
+      }
+      .img1 {
+        position: absolute;
+        top: 100px;
+        right: 0;
+        left: 0;
+        margin: auto;
+        width: 150px;
+        height: 150px;
+        border-style: groove;
+        border-radius: 50%;
+        border-color: lightblue;
+        transition: 1s;
+      }
+      .img1:hover {
+        transform: rotate(-360deg);
+      }
+      a {
+        text-decoration: none;
+      }
+      .container1 {
+        position: absolute;
+        top: 40%;
+        left: 74%;
+      }
+      .container2 {
+        position: absolute;
+        top: 296px;
+        left: 23.1%;
+      }
+      .container3 {
+        position: absolute;
+        top: 13.1%;
+        left: 79%;
+      }
+      .container4 {
+        position: absolute;
+        top: 70px;
+        left: 64px;
+      }
+      .container div img {
+        width: 50px;
+        height: 50px;
+      }
+      .container div img {
+        transform: rotate(360deg);
+        animation: sun 3s linear infinite;
+      }
+      .container .container1:hover::before,
+      .container .container2:hover::before,
+      .container .container3:hover::before,
+      .container .container4:hover::before {
+        content: " ";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        filter: blur(37px);
+        background-color: yellow;
+        /* z-index:-1; */
+      }
+      @keyframes sun {
+        100% {
+          transform: rotate(720deg);
+        }
+      }
+      .container5 {
+        position: absolute;
+        top: 430px;
+        left: 0;
+        right: 0;
+        margin: auto;
+        width: 300px;
+        height: 50px;
+        border: #ffff 2px groove;
+        border-radius: 25px;
+        font-size: 25px;
+        text-shadow: 2px 2px 50px;
+        text-align: center;
+        color: white;
+        box-shadow: 0px 0px 15px inset;
+        transition: 0.5s;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container5:hover:before {
+        content: " ";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        filter: blur(20px);
+        opacity: 0.4;
+      }
+      .container6 {
+        height: 20px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        color: white;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="container">
+      <a href="https://www.rigelstar.cn" target="_blank">
+        <img
+          class="img1"
+          src="https://www.rigelstar.cn/upload/2021/10/head-2fc582131e4147b5b0847d0e8b3635a5.jpg"
+          alt=""
+      /></a>
+      <div class="container1" id="container1">
+        <img
+          id="img1"
+          src="https://rigel-1306416438.cos.ap-shanghai.myqcloud.com/imgs/1.png"
+          alt=""
+        />
+      </div>
+      <div class="container2" id="container2">
+        <img
+          id="img2"
+          src="https://rigel-1306416438.cos.ap-shanghai.myqcloud.com/imgs/2.png"
+          alt=""
+        />
+      </div>
+      <div class="container3" id="container3">
+        <img
+          id="img3"
+          src="https://rigel-1306416438.cos.ap-shanghai.myqcloud.com/imgs/3.png"
+          alt=""
+        />
+      </div>
+      <div class="container4" id="container4">
+        <img
+          id="img4"
+          src="https://rigel-1306416438.cos.ap-shanghai.myqcloud.com/imgs/4.png"
+          alt=""
+        />
+      </div>
+      <div class="container5" id="container5">RigelStar</div>
+      <div class="container6">
+        @Blog <font style="color: rgb(11, 192, 247)">RigelStar</font> Power by
+        <font style="color: rgb(16, 113, 192)">Halo</font>
+      </div>
+    </div>
+    <script>
+      window.onload = function () {
+        var container = document.getElementById("container");
+        container.addEventListener(
+          "mousemove",
+          function (event) {
+            var x = event.x;
+            var y = event.y;
+            container.style.backgroundPositionY = -y / 50 + "px";
+            container.style.backgroundPositionX = -x / 50 + "px";
+            img1.style.top = -y / 50 + "px";
+            img1.style.left = -x / 50 + "px";
+          },
+          false
+        );
+        var img1 = document.getElementById("img1");
+        var img2 = document.getElementById("img2");
+        var img3 = document.getElementById("img3");
+        var img4 = document.getElementById("img4");
+        var container5 = document.getElementById("container5");
+
+        img1.addEventListener(
+          "click",
+          function () {
+            container5.innerText = "RigelStar";
+            container5.style.height = "50px";
+          },
+          false
+        );
+        img2.addEventListener(
+          "click",
+          function () {
+            container5.innerText =
+              "Rigel是一颗蓝色恒星的名字,中文名为'参宿七',个人比较喜欢蓝色,对这颗恒星情有独钟所以取名RigelStar";
+            container5.style.height = "140px";
+          },
+          false
+        );
+        img3.addEventListener(
+          "click",
+          function () {
+            container5.innerText =
+              "我是一名普通大学生,每天做得最多的事情就是躺尸,再者便是打游戏.如果有爱打游戏的小伙伴,可以叫我,虽然我很菜(峡谷五年青铜)";
+            container5.style.height = "180px";
+          },
+          false
+        );
+        img4.addEventListener(
+          "click",
+          function () {
+            container5.style.height = "100px";
+            container5.innerHTML =
+              "个人博客:<br/>https://www.rigelstar.cn 个人简介:从零开始的菜鸟";
+          },
+          false
+        );
+      };
+    </script>
+  </body>
+</html>
